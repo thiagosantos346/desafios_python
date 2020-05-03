@@ -109,10 +109,9 @@ def main():
   str_response_data_json = str_response_data_json.replace("\'", '\"')
   stdioFile(LOCAL_CONSTS['data_output'], LOCAL_CONSTS['file_name']  , str_response_data_json, 'w')
   stdioFile(LOCAL_CONSTS['data_output'], LOCAL_CONSTS['file_name']  , None , 'r')
-
-  file_path =LOCAL_CONSTS['data_output']+LOCAL_CONSTS['file_name'] 
-
-  conn = get_http_connection(LOCAL_CONSTS['host'])
+  
+  #upload 
+  file_path =LOCAL_CONSTS['data_output']+LOCAL_CONSTS['file_name']
   upload(LOCAL_CONSTS['data_output'],  LOCAL_CONSTS['file_name'] ,full_url_post)
 
 if __name__=="__main__":
